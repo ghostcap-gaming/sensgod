@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mouse Sensitivity Converter</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<script src="converter.js"></script>
+<p>
+  <label for="fromgames">From :</label>
+  <select name="from_games" id="from_games" onchange="senseConverter()">
+    <option value="APEX_LEGENDS">APEX LEGENDS</option>
+    <option value="AIM_LAB">AIM LAB</option>
+    <option value="ARK_SURVIVAL_EVOLVE">ARK SURVIVAL EVOLV</option>
+    <option value="BACK_4_BLOOD">BACK 4 BLOOD</option>
+    <option value="BATTLEFIELD_1">BATTLEFIELD 1</option>
+    <option value="BATTLEFIELD_4">BATTLEFIELD 4</option>
+    <option value="BATTLEFIELD_v">BATTLEFIELD v</option>
+    <option value="BATTLEFIELD_2042">BATTLEFIELD 2042</option>
+    <option value="BLOODSQUAD">BLOODSQUAD</option>
+    <option value="BLOODHUNT">BLOODHUNT</option>
+    <option value="BORDERLAND_3">BORDERLAND 3</option>
+    <option value="COD_BLACK_OPS_4">COD: BLACK OPS 4</option>
+    <option value="COD_BLACK_OPS_COLDWAR">COD: BLACK OPS COLD WAR</option>
+    <option value="COD_MORDERN_WARFARE">COD: MODERN WARFARE</option>
+    <option value="COD_VANGUARDE">COD: VANGUARD</option>
+    <option value="COD_WARZONE">COD: WARZONE</option>
+    <option value="DESTINY_2">DESTINY 2</option>
+    <option value="CS_1_6">CS: 1.6</option>
+    <option value="CSS">CS: SOURCE</option>
+    <option value="CSGO">CS: GO</option>
+    <option value="DOOM_ETERNAL">DOOM ETERNAL</option>
+    <option value="GARRY_MOD">GARRY'S MOD</option>
+    <option value="HALF_LIFE_2">HALF LIFE 2</option>
+    <option value="LEFT_4_DEAD_2">LEFT 4 DEAD 2</option>
+    <option value="QUAKE_CHAMPIONS">QUAKE CHAMPIONS</option>
+    <option value="TEAM_FORTRESS_2">TEAM FORTRESS 2</option>
+    <option value="TITAN_FALL_2">TITAN FALL 2</option>
+    <option value="CYBERPUNK_2077">CYBERPUNK 2077</option>
+    <option value="DAYZ">DAYZ</option>
+    <option value="OVERWATCH">OVERWATCH</option>
+    <option value="DYING_LIGHT_2">DYING LIGHT 2</option>
+    <option value="ESCAPE_FROM_TARKOV">ESCAPE FROM TARKOV</option>
+    <option value="FALLOUT_4">FALLOUT 4</option>
+    <option value="FALLOUT_76">FALLOUT 76</option>
+    <option value="FAR_CRY_5">FAR CRY 5</option>
+    <option value="FORTNITE">FORTNITE</option>
+    <option value="HALO_INFINITE">HALO INFINITE</option>
+    <option value="HALO_REACH">HALO REACH</option>
+    <option value="HEROES_GENERALS">HEROES AND GENERALS</option>
+    <option value="HUNT_SHOWDOWN">HUNT: SHOWDOWN</option>
+    <option value="HYPERSPACE">HYPERSPACE</option>
+    <option value="INSURGENCY_SANDSTORM">INSURGENCY SANDSTORM</option>
+    <option value="NEW_WORLD">NEW WORLD</option>
+    <option value="OSU">OSU</option>
+    <option value="PALADINS">PALADINS</option>
+    <option value="PAYDAY_2">PAYDAY 2</option>
+    <option value="RAINBOW_SIX_EXTRACTION">RAINBOW SIX EXTRACTION</option>
+    <option value="RAINBOW_SIX_SEIGE">RAINBOW SIX SEIGE</option>
+    <option value="ROBLOX">ROBLOX</option>
+    <option value="RUST">RUST</option>
+    <option value="SPELLBREAK">SPELLBREAK</option>
+    <option value="SPLITGATE">SPLITGATE</option>
+    <option value="SQUAD">SQUAD</option>
+    <option value="UNTURNED">UNTURNED</option>
+    <option value="VALHEIM">VALHEIM</option>
+    <option value="VALORANT">VALORANT</option>
+    <option value="WARFACE">WARFACE</option>
+    
+  </select>
+  <input id="input_sense" type="number" placeholder="From sensivity"
+  oninput="senseConverter()"  value=1>
+</p>
+<p>
+<label for="fromDPI">From DPI : </label><input id="input_DPI" type="number" placeholder="from DPI"
+  oninput="senseConverter()"  value=400>
+</p>
+<p>
+<label for="toDPI">To DPI : </label><input id="output_DPI" type="number" placeholder="to DPI"
+  oninput="senseConverter()"  value=400>
+</p>
+<p>
+  <label for="togames">To :</label>
+  <select name="to_games" id="to_games" onchange="senseConverter()">
+     <option value="APEX_LEGENDS">APEX LEGENDS</option>
+    <option value="AIM_LAB">AIM LAB</option>
+    <option value="ARK_SURVIVAL_EVOLVE">ARK SURVIVAL EVOLV</option>
+    <option value="BACK_4_BLOOD">BACK 4 BLOOD</option>
+    <option value="BATTLEFIELD_1">BATTLEFIELD 1</option>
+    <option value="BATTLEFIELD_4">BATTLEFIELD 4</option>
+    <option value="BATTLEFIELD_v">BATTLEFIELD v</option>
+    <option value="BATTLEFIELD_2042">BATTLEFIELD 2042</option>
+    <option value="BLOODSQUAD">BLOODSQUAD</option>
+    <option value="BLOODHUNT">BLOODHUNT</option>
+    <option value="BORDERLAND_3">BORDERLAND 3</option>
+    <option value="COD_BLACK_OPS_4">COD: BLACK OPS 4</option>
+    <option value="COD_BLACK_OPS_COLDWAR">COD: BLACK OPS COLD WAR</option>
+    <option value="COD_MORDERN_WARFARE">COD: MODERN WARFARE</option>
+    <option value="COD_VANGUARDE">COD: VANGUARD</option>
+    <option value="COD_WARZONE">COD: WARZONE</option>
+    <option value="DESTINY_2">DESTINY 2</option>
+    <option value="CS_1_6">CS: 1.6</option>
+    <option value="CSS">CS: SOURCE</option>
+    <option value="CSGO">CS: GO</option>
+    <option value="DOOM_ETERNAL">DOOM ETERNAL</option>
+    <option value="GARRY_MOD">GARRY'S MOD</option>
+    <option value="HALF_LIFE_2">HALF LIFE 2</option>
+    <option value="LEFT_4_DEAD_2">LEFT 4 DEAD 2</option>
+    <option value="QUAKE_CHAMPIONS">QUAKE CHAMPIONS</option>
+    <option value="TEAM_FORTRESS_2">TEAM FORTRESS 2</option>
+    <option value="TITAN_FALL_2">TITAN FALL 2</option>
+    <option value="CYBERPUNK_2077">CYBERPUNK 2077</option>
+    <option value="DAYZ">DAYZ</option>
+    <option value="OVERWATCH">OVERWATCH</option>
+    <option value="DYING_LIGHT_2">DYING LIGHT 2</option>
+    <option value="ESCAPE_FROM_TARKOV">ESCAPE FROM TARKOV</option>
+    <option value="FALLOUT_4">FALLOUT 4</option>
+    <option value="FALLOUT_76">FALLOUT 76</option>
+    <option value="FAR_CRY_5">FAR CRY 5</option>
+    <option value="FORTNITE">FORTNITE</option>
+    <option value="HALO_INFINITE">HALO INFINITE</option>
+    <option value="HALO_REACH">HALO REACH</option>
+    <option value="HEROES_GENERALS">HEROES AND GENERALS</option>
+    <option value="HUNT_SHOWDOWN">HUNT: SHOWDOWN</option>
+    <option value="HYPERSPACE">HYPERSPACE</option>
+    <option value="INSURGENCY_SANDSTORM">INSURGENCY SANDSTORM</option>
+    <option value="NEW_WORLD">NEW WORLD</option>
+    <option value="OSU">OSU</option>
+    <option value="PALADINS">PALADINS</option>
+    <option value="PAYDAY_2">PAYDAY 2</option>
+    <option value="RAINBOW_SIX_EXTRACTION">RAINBOW SIX EXTRACTION</option>
+    <option value="RAINBOW_SIX_SEIGE">RAINBOW SIX SEIGE</option>
+    <option value="ROBLOX">ROBLOX</option>
+    <option value="RUST">RUST</option>
+    <option value="SPELLBREAK">SPELLBREAK</option>
+    <option value="SPLITGATE">SPLITGATE</option>
+    <option value="SQUAD">SQUAD</option>
+    <option value="UNTURNED">UNTURNED</option>
+    <option value="VALHEIM">VALHEIM</option>
+    <option value="VALORANT">VALORANT</option>
+    <option value="WARFACE">WARFACE</option>
+  </select>
+  <input id="output_sense" type="number" placeholder="To sensivity"
+  oninput="senseConverter()"  value=1 readonly>
+</p>
+<p>In/360 : <span id="In360">0.31</span></p>
+<p>Cm/360 : <span id="Cm360">0.31</span></p>
+<p>© <a href="https://sensgod.com/">Sensgod</a></p>
+</body>
+</html>
